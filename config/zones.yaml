@@ -1,0 +1,27 @@
+# Restricted zones and tripwires. Edit this file -- no code changes needed.
+# Leave both lists empty (the default) for a clean feed with no boxes/alerts.
+#
+# Coordinates are pixels in the camera frame: [x, y], origin top-left.
+# severity: low | medium | high   (higher = shorter dwell time before an alert)
+# alert_on_entry: true = alert the instant someone steps into the zone (no time limit; good for a
+#   window or door). Default false = alert after the severity's time limit.
+# direction_sensitive: true = only one crossing direction counts as a violation
+#
+# reference_size: [w, h] (written by the editors) = the frame size the coordinates were
+# drawn on; the desktop app rescales to the real frame size. Omit it for as-is pixels.
+#
+# To make your own, copy the example below (uncomment and change it):
+#
+# zones:
+#   - name: ServerRoomDoor
+#     severity: high
+#     polygon: [[420, 120], [620, 120], [620, 380], [420, 380]]
+#
+# tripwires:
+#   - name: MainGateLine
+#     p1: [0, 250]
+#     p2: [640, 250]
+#     direction_sensitive: true
+
+zones: []
+tripwires: []

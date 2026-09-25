@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Desktop App (GUI)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "desktop_app.main",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Single Video / Webcam",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.main",
+      "args": ["--source", "0"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Batch (folder of videos)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.batch_run",
+      "args": ["--folder", "videos", "--out", "results"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Production Live (multi-camera)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.production.live_main",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run All Tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": ["discover", "-s", "tests", "-v"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Add or remove cameras here -- no code changes needed.
+# Delete this file entirely to fall back to the single default webcam
+# defined in src/config.py.
+#
+# source: "0" for the default local webcam, "1"/"2" for other local devices,
+#         or an RTSP/HTTP URL for an IP camera.
+cameras:
+  - camera_id: cam0
+    source: "0"
+  # - camera_id: cam1
+  #   source: "rtsp://user:pass@192.168.1.50:554/stream1"
